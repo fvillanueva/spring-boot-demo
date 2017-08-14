@@ -1,0 +1,18 @@
+/****************************************
+  Name: Table Articles
+  Description: Table of all content articles
+  Created: 13-08-2017
+  Author: Fidel Villanueva Delgado
+ */
+create table ARTICLES
+(
+	ARTICLE_ID int(5) auto_increment
+		primary key,
+	TITLE varchar(200) not null,
+	CATEGORY varchar(100) not null
+);
+
+INSERT INTO development.ARTICLES (TITLE, CATEGORY) VALUES ('Hibernate HQL ', 'Hibernate');
+INSERT INTO development.ARTICLES (TITLE, CATEGORY) VALUES ('Spring MVC with Hibernate', 'Spring');
+INSERT INTO development.ARTICLES (TITLE, CATEGORY) VALUES ('Amazon Web Services ', 'Cloud Services');
+INSERT INTO development.ARTICLES (TITLE, CATEGORY) VALUES ('Cisco CCNA 2 ', 'Redes');
