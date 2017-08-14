@@ -2,11 +2,13 @@ package com.concretepage.client;
 
 import java.net.URI;
 
+import org.hibernate.SQLQuery;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.web.client.RestTemplate;
 
 import com.concretepage.entity.Article;
@@ -67,6 +69,9 @@ public class RestClientUtil {
 	    String url = "http://localhost:8080/user/article/{id}";
         HttpEntity<Article> requestEntity = new HttpEntity<Article>(headers);
         restTemplate.exchange(url, HttpMethod.DELETE, requestEntity, Void.class, 4);        
+    }
+    public void restCall(String dni){
+
     }
     public static void main(String args[]) {
     	RestClientUtil util = new RestClientUtil();

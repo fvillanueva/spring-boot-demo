@@ -1,4 +1,6 @@
 application.properties
 MyApplication.class
 target
-.idea/
+.idea
+target/
+*.iml

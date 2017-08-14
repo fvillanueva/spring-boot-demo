@@ -5,14 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.concretepage.entity.Article;
 import com.concretepage.service.IArticleService;
 
-@Controller
+@RestController
 @RequestMapping("api/user")
 public class ArticleController {
 	@Autowired
@@ -61,5 +60,11 @@ public class ArticleController {
 		articleService.deleteArticle(id);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
 
-	}	
+	}
+	@RequestMapping(value = "saldo", method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<Object> getFechaSaldo(){
+		Double saldo=new Double(12.3456);
+
+		return new ResponseEntity<Object>(saldo,HttpStatus.OK);
+	}
 } 
